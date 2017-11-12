@@ -1,0 +1,82 @@
+[26-Oct-2017 01:29:30] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 01:30:57] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 06:13:08] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 06:13:28] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 06:13:34] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 06:14:07] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 06:14:19] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 06:14:23] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 06:58:03] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 06:59:02] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:00:45] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:00:47] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:01:03] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:01:22] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:01:23] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:01:42] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:01:49] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 12:02:34 UTC] PHP Warning:  PHP Startup: magickwand: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20121212
+These options need to match
+ in Unknown on line 0
+[26-Oct-2017 12:02:34 UTC] PHP Warning:  PHP Startup: imagick: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20121212
+These options need to match
+ in Unknown on line 0
+[26-Oct-2017 12:02:34 UTC] PHP Warning:  PHP Startup: PDO: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20121212
+These options need to match
+ in Unknown on line 0
+[26-Oct-2017 12:02:34 UTC] PHP Warning:  PHP Startup: pdo_sqlite: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20121212
+These options need to match
+ in Unknown on line 0
+[26-Oct-2017 12:02:34 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/opt/php52/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so' - /opt/php52/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so: undefined symbol: third_arg_force_ref in Unknown on line 0
+[26-Oct-2017 12:02:34 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/opt/php52/lib/php/extensions/no-debug-non-zts-20060613/pdo_mysql.so' - libssl.so.0.9.8: cannot open shared object file: No such file or directory in Unknown on line 0
+[26-Oct-2017 12:02:34 UTC] PHP Warning:  PHP Startup: SourceGuardian: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20121212
+These options need to match
+ in Unknown on line 0
+[26-Oct-2017 12:02:34 UTC] PHP Fatal error:  Directive 'allow_call_time_pass_reference' is no longer available in PHP in Unknown on line 0
+[26-Oct-2017 07:13:13 America/Chicago] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/browswit/public_html/expedition2/test.php on line 4
+[26-Oct-2017 07:13:16 America/Chicago] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/browswit/public_html/expedition2/test.php on line 4
+[26-Oct-2017 07:13:35] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:13:38] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:24:06] PHP Fatal error:  Call to undefined function  apache_get_modules() in /home/browswit/public_html/expedition2/test.php on line 4
+[26-Oct-2017 07:24:06] PHP Fatal error:  Call to undefined function  apache_get_modules() in /home/browswit/public_html/expedition2/test.php on line 4
+[26-Oct-2017 07:30:46] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:30:49] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:33:01] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:33:25] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:33:29] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:33:32] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:33:35] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:35:47] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:35:51] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:35:54] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 18:07:39] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 18:07:41] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 18:07:42] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 18:07:43] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 18:07:45] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 18:07:46] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:37:55 America/Chicago] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/browswit/public_html/expedition2/test.php on line 4
+[26-Oct-2017 07:41:32 America/Chicago] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/browswit/public_html/expedition2/test.php on line 4
+[26-Oct-2017 07:47:00] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:50:40] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:50:42] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:50:46] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:53:47] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:53:48] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:53:49] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:53:51] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:54:22] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:54:23] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:54:26] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 07:54:28] PHP Parse error:  syntax error, unexpected T_CONST in /home/browswit/public_html/expedition2/system/core/CodeIgniter.php on line 58
+[26-Oct-2017 08:12:51 America/Chicago] PHP Fatal error:  Call to undefined function apache_get_modules() in /home/browswit/public_html/expedition2/test.php on line 4

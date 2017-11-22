@@ -2,7 +2,7 @@
  <footer class="main-footer">
         <div class="container">
           <div class="ineuis">
-          <strong>Powered by  <a href="http://www.dnm.in" target="_blank">DNM</a></strong> </div>
+          <strong>Powered by  <a href="http://www.dnm.in" target="_blank">Taarruni Design Solutions</a></strong> </div>
         </div><!-- /.container -->
       </footer>
     </div><!-- ./wrapper -->

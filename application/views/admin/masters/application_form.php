@@ -34,7 +34,7 @@
                     </div></br>
                     <div class="col-xs-11">
                      <label>
-                        <input type="checkbox" class="flat-red" name="enabled" value="1" <?php if($enabled==1 ) echo 'checked'; ?>>&nbsp;&nbsp; Active </label>
+                        <input type="checkbox" class="flat-red" name="activate" value="1" <?php if($activate==1 ) echo 'checked'; ?>>&nbsp;&nbsp; Active </label>
                     </div>
                     </div>
                     

@@ -21,6 +21,7 @@ class Permissions extends Admin_Controller {
        // if($check){
         $data['roles'] = $this->Roles_model->get_result_active();
         $data['permissions'] = $this->Roles_model->get_result('permissions');
+       // echo "<pre>"; print_r($data); exit();
 		$data['page_title']	=  'Roles & Permissions';
 		$this->view($this->config->item('admin_folder').'/roles/permissions', $data);
             //}else

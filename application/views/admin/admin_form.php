@@ -27,10 +27,10 @@
                         <input type="text" name="firstname" value="<?php echo set_value('firstname',$firstname); ?>" class="form-control" id="exampleInputEmail1" placeholder="Name" >
                     </div>
                     
-               <!--   <div class="form-group form-groupsss">
-                        <label for="exampleInputEmail1">Lastname </label>
+                 <div class="form-group form-groupsss">
+                        <!-- <label for="exampleInputEmail1">Lastname </label> -->
                         <input type="text" name="lastname" value="<?php echo $lastname; ?>" class="form-control" id="exampleInputEmail1" placeholder="Name" >
-                    </div>  -->
+                    </div> 
                 
 				 <div class="form-group form-groupsss">
                         <input type="text" name="username" value="<?php echo set_value('username',$username); ?>" class="form-control" id="exampleInputEmail1" placeholder="Username" >
@@ -38,36 +38,6 @@
                     
                      <div class="form-group form-groupsss">
                         <input type="text" name="email" value="<?php echo set_value('email',$email); ?>" class="form-control" id="exampleInputEmail1" placeholder="Email" >
-                    </div>
-                    
-                    <div class="form-group form-groupsss">
-                        <select class="form-control valid " name="state" id="state" aria-invalid="false" >
-                            <option value="0" disabled selected>Select State ..</option>
-                            <?php if(!empty($state_list)) { foreach($state_list as $list) { ?>
-                            <option value="<?php echo $list['stateID']; ?>" <?php if(!empty($state) && $list['stateID'] == $state) echo 'selected'; ?> ><?php echo $list['stateName']; ?></option>
-                            <?php } } ?>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group form-groupsss">
-                        <select class="form-control valid" name="city" id="city" aria-invalid="false" >
-                            <option value="0" disabled selected>Select City ..</option>
-                             <?php if(!empty($city_list)) { foreach($city_list as $list) { ?>
-                            <option value="<?php echo $list['cityID']; ?>" <?php if(!empty($city) && $list['cityID'] == $city) echo 'selected'; ?> ><?php echo $list['cityName']; ?></option>
-                            <?php } } ?>
-                        </select>
-                    </div>
-                    
-                     <div class="form-group form-groupsss">
-                        <input type="text" name="employee_code" value="<?php echo set_value('employee_code',$employee_code); ?>" class="form-control" id="exampleInputEmail1" placeholder="EMPLOYEE CODE" >
-                    </div>
-                    
-                     <div class="form-group form-groupsss">
-                        <input type="text" name="designation" value="<?php echo set_value('designation',$designation); ?>" class="form-control" id="exampleInputEmail1" placeholder="DESIGNATION" >
-                    </div>
-                    
-                     <div class="form-group form-groupsss">
-                        <input type="text" name="allowed_discount" value="<?php echo set_value('allowed_discount',$allowed_discount); ?>" class="form-control" id="exampleInputEmail1" placeholder="ALLOWED DISCOUNT (%)" >
                     </div>
                     
                       
@@ -81,25 +51,12 @@
                     </div>
                     
                     <div class="form-group form-groupsss">
-                        <select class="form-control select2" multiple="multiple" data-placeholder="Select Showroom .." name="showroom[]" id="application" >
-                            <?php if(!empty($stores_list)) { foreach($stores_list as $list) { ?>
-                            <option value="<?php echo $list['id']; ?>" <?php if(!empty($showroom)) { if( in_array($list['id'], $showroom, true)){ echo 'selected'; } } ?> >  <?php echo $list['name']; ?>
-                            </option>
-                            <?php } } ?>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group form-groupsss">
                         <input type="password" name="password" class="form-control" id="password" placeholder="Password" >
                     </div>
                     
                      <div class="form-group form-groupsss">
                         <input type="password" name="confirm" class="form-control" id="confirm" placeholder="Confirm Password" >
                     </div>
-                    
-                     <div class="form-group mail_signature clearfix">
-                    <textarea class="form-control valid" rows="3" id="mail_signature" placeholder="MAIL SIGNATURE DETAILS" name="mail_signature" aria-invalid="false" ><?php echo set_value('mail_signature',$mail_signature); ?></textarea>
-                   </div>
                    
                      <div class="form-group form-groupsss enabled">
                     <input type="checkbox" class="flat-red" name="enabled" value="1" <?php if($enabled==1 ) echo 'checked'; ?>>&nbsp;&nbsp; Active </label> </div>

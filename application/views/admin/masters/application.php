@@ -75,16 +75,16 @@
                                 <i class="fa fa-ellipsis-v"></i>
                             </span></a></td>
                       <td><?php echo $appltn->name; ?></td>
-                      <td> <div class="actv<?php echo $appltn->id; ?>"> <?php if($appltn->enabled == 1) echo "Yes"; else echo "No"; ?> </div></td>
+                      <td> <div class="actv<?php echo $appltn->id; ?>"> <?php if($appltn->activate == 1) echo "Yes"; else echo "No"; ?> </div></td>
                       <td class="center">
                       
                           <a class="various" data-fancybox-type="iframe" href="<?php echo base_url('admin/application/form/'.$appltn->id); ?>">
                           <button class="btn btn-info btn-sm" data-widget="Edit" data-toggle="tooltip" title="" data-original-title="Edit">
                           <i class="fa fa-fw fa-pencil"></i></button> </a>
                           
-                          <button class="btn btn-default btn-sm deactive_active" data-widget="Active" data-toggle="tooltip" title="" data-original-title="Active" id="overlay1<?php echo $appltn->id; ?>" value="<?php echo $appltn->id; ?>" <?php if(!empty($appltn->enabled)) echo 'style="display:none;"'; ?>><i class="icon fa fa-check"></i></button>
+                          <button class="btn btn-default btn-sm deactive_active" data-widget="Active" data-toggle="tooltip" title="" data-original-title="Active" id="overlay1<?php echo $appltn->id; ?>" value="<?php echo $appltn->id; ?>" <?php if(!empty($appltn->activate)) echo 'style="display:none;"'; ?>><i class="icon fa fa-check"></i></button>
                           
-                          <button class="btn btn-default btn-sm deactive_active" data-widget="Deactive" data-toggle="tooltip" title="" data-original-title="Deactive" id="overlay2<?php echo $appltn->id; ?>" value="<?php echo $appltn->id; ?>" <?php if(empty($appltn->enabled)) echo 'style="display:none;"'; ?>><i class="fa fa-fw fa-times"></i></button>
+                          <button class="btn btn-default btn-sm deactive_active" data-widget="Deactive" data-toggle="tooltip" title="" data-original-title="Deactive" id="overlay2<?php echo $appltn->id; ?>" value="<?php echo $appltn->id; ?>" <?php if(empty($appltn->activate)) echo 'style="display:none;"'; ?>><i class="fa fa-fw fa-times"></i></button>
                           
                           
                       </td>

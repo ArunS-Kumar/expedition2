@@ -88,7 +88,7 @@ class Application extends Admin_Controller {
         $data['id']                 = '';
         $data['name']               = '';
         $data['description']        = '';
-        $data['enabled']            = '';
+        $data['activate']            = '';
        
         if ($id)
         {   
@@ -103,12 +103,12 @@ class Application extends Admin_Controller {
             $data['id']                = $application->id;
             $data['name']              = $application->name;
             $data['description']       = $application->description;
-            $data['enabled']           = $application->enabled;
+            $data['activate']           = $application->activate;
         }
 
         $this->form_validation->set_rules('name', 'Name', 'trim|required|max_length[255]');
         $this->form_validation->set_rules('description', 'lang:description', 'trim');
-        $this->form_validation->set_rules('enabled', 'lang:enabled', 'trim|numeric');
+        $this->form_validation->set_rules('activate', 'lang:enabled', 'trim|numeric');
         
         if ($this->form_validation->run() == FALSE)
         {
@@ -121,11 +121,11 @@ class Application extends Admin_Controller {
             $save['id']                 = $id;
             $save['name']               = $this->input->post('name');
             $save['description']        = $this->input->post('description');
-            $save['enabled']            = $this->input->post('enabled');
-            $save['created_by']         = $this->session->userdata('admin')['id'];
+            $save['activate']            = $this->input->post('activate');
+            $save['created_at']         = $this->session->userdata('admin')['id'];
             
             if($id)
-            $save['modified_on']         = date('Y-m-d H:i:s');
+            $save['updated_at']         = date('Y-m-d H:i:s');
             
             $homebanner_id              = $this->Application_model->save($save);
             $this->session->set_flashdata('message', lang('message_category_saved'));
@@ -142,7 +142,7 @@ class Application extends Admin_Controller {
 	        $val = '';
 	        $id = $_POST['id'];
 	        $application       = $this->Application_model->get_category($id);
-	        if($application->enabled == 1) {
+	        if($application->activate == 1) {
 	            $this->Application_model->activate_dactivate($id,0);
 	            //$this->session->set_flashdata('message', 'Deactivated Successfully');
 	            $val .= '2';

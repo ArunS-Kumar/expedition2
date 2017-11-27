@@ -23,7 +23,7 @@ $(window).ready(function(){
 
 <div class="row-fluid">
 	<div class="span12">
-		<?php echo form_open_multipart($this->config->item('admin_folder').'/product/product_image_upload', 'class="form-inline"');?>
+		<?php echo form_open_multipart($this->config->item('admin_folder').'/tour/tour_image_upload', 'class="form-inline"');?>
 			<?php echo form_upload(array('name'=>'userfile[]', 'multiple'=>'multiple', 'id'=>'userfile', 'class'=>'input-file'));?> <input class="btn" name="submit" type="submit" value="<?php echo 'Upload'; ?>" />
 		</form>
 	</div>
@@ -33,7 +33,7 @@ $(window).ready(function(){
 
 .container-fluid {
     padding: 10px 10px 15px;
-    background-color: #000;
+    /*background-color: #000;*/
 }
 </style>
 <?php include('footer.php');

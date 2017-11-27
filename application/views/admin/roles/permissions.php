@@ -27,7 +27,7 @@
                                     // 'application'=>'Master Application',
                                     'type'=>'Master Type',
                                     // 'activities'=>'Master Activities',
-                                    'tours'=>'Tours',
+                                    'tour'=>'Tours',
                                     'admin'=>'Users',
                                     'roles'=>'Roles',
                                     'permissions'=>'Permissions',

@@ -27,7 +27,7 @@
             </li>
             
             <?php } if($this->session->userdata('admin')['access'] == 1 || $this->session->userdata('admin')['access'] == 2 || $this->session->userdata('admin')['access'] == 3) { ?>
-            <li class="active"><a href="<?php echo site_url($this->config->item('admin_folder').'/'); ?>"><i class="fa fa-fw fa-file-pdf-o"></i>Tours</a></li>
+            <li class="active"><a href="<?php echo site_url($this->config->item('admin_folder').'/tour'); ?>"><i class="fa fa-fw fa-file-pdf-o"></i>Tours</a></li>
             <?php } if($this->session->userdata('admin')['access'] == 1 ) { ?>
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">

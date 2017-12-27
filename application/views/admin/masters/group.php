@@ -31,7 +31,7 @@
                   <option value="100">100</option>
                   </select> </div>
                   
-                   <a class="various" data-fancybox-type="iframe" href="<?php echo base_url('admin/subgroup/form'); ?>" style="float: left;">
+                   <a class="various" data-fancybox-type="iframe" href="<?php echo base_url('admin/menu/form'); ?>" style="float: left;">
                   <button type="button" class="btn btn-success btn-sm" data-widget="Add" data-toggle="tooltip" title="" data-original-title="Add"><i class="fa fa-fw fa-plus"></i></button></a>
                   
                   </h3>
@@ -60,7 +60,6 @@
                     <tr>
                       <th style="width: 38px">#</th>
                       <th>Name</th>
-                      <th>Menu</th>
                       <th>Active</th>
                       <th class="center" style="width: 150px">Action</th>
                     </tr>
@@ -78,11 +77,10 @@
                                 <i class="fa fa-ellipsis-v"></i>
                             </span></a></td>
                       <td><?php echo $categy->name; ?></td>
-                      <td><?php if(!empty($categy->gname)) echo $categy->gname; ?></td>
                       <td> <div class="actv<?php echo $categy->id; ?>"> <?php if($categy->enabled == 1) echo "Yes"; else echo "No"; ?> </div></td>
                       <td class="center">
                       
-                          <a class="various" data-fancybox-type="iframe" href="<?php echo base_url('admin/subgroup/form/'.$categy->id); ?>">
+                          <a class="various" data-fancybox-type="iframe" href="<?php echo base_url('admin/menu/form/'.$categy->id); ?>">
                           <button class="btn btn-info btn-sm" data-widget="Edit" data-toggle="tooltip" title="" data-original-title="Edit">
                           <i class="fa fa-fw fa-pencil"></i></button> </a>
                           
@@ -145,7 +143,7 @@
             $(".overlay").show();
             var id = 'ajaxloaded';
             var searchtext = $("#searchtext").val();
-            $.post("<?php echo base_url(); ?>admin/subgroup", {
+            $.post("<?php echo base_url(); ?>admin/menu", {
                 id: id, searchtext: searchtext
             }, function (data) {
                 $(".overlay").hide();
@@ -160,7 +158,7 @@
             var searchtext = $("#searchtext").val();
             var id = 'ajaxloaded';
             
-             $.post("<?php echo base_url(); ?>admin/subgroup", {
+             $.post("<?php echo base_url(); ?>admin/menu", {
                 id: id, searchtext: searchtext
             }, function (data) {
                 $(".overlay").hide();
@@ -175,7 +173,7 @@
             var searchtext = $("#searchtext").val();
             var id = 'ajaxloaded';
             
-             $.post("<?php echo base_url(); ?>admin/subgroup", {
+             $.post("<?php echo base_url(); ?>admin/menu", {
                 id: id
             }, function (data) {
                 $(".overlay").hide();
@@ -209,7 +207,7 @@
             $(".overlay").show();
             var id = $( this ).val();
             
-            $.post("<?php echo base_url(); ?>admin/subgroup/activate_dactivate", {
+            $.post("<?php echo base_url(); ?>admin/menu/activate_dactivate", {
                 id: id
             }, function (data) {
                 if(data == 1) {
@@ -234,7 +232,7 @@
             var id = 'ajaxloaded';
             var tablelimit = $( this ).val();
             
-             $.post("<?php echo base_url(); ?>admin/subgroup", {
+             $.post("<?php echo base_url(); ?>admin/menu", {
                 id: id, searchtext: searchtext , tablelimit: tablelimit
             }, function (data) {
                 $(".overlay").hide();
@@ -279,7 +277,7 @@ function create_sortable()
 function save_sortable()
 {
 	$.ajax({
-		url:"<?php echo base_url();?>admin/subgroup/get_serial",
+		url:"<?php echo base_url();?>admin/menu/get_serial",
 		type:'POST',
 		data:$('#model_contents').sortable('serialize'),
 		success:function(data){

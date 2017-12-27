@@ -16,48 +16,36 @@
              
              <div class="box box-info">
                 <div class="box-header with-border">
-                  <h3 class="box-title"> <i class="fa fa-fw fa-plus"></i> Sub Menu</h3>
+                  <h3 class="box-title"> <i class="fa fa-fw fa-plus"></i> Tag</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form class="form-horizontal" action="<?php echo base_url('admin/subgroup/form/'.$id);?>" method="post" accept-charset="utf-8" enctype="multipart/form-data" id="cont_enquiry">
+                <form class="form-horizontal" action="<?php echo base_url('admin/tags/form/'.$id);?>" method="post" accept-charset="utf-8" enctype="multipart/form-data" id="cont_enquiry">
                   <div class="box-body">
-                    
-                    <div class="col-xs-11">
-                        <select name="parent" class="form-control">
-                          <option value="" > -- Select Menu -- </option>
-                          <?php foreach ($group_list as $key => $value) { ?>
-                            <option value="<?php echo $value->id; ?>" > <?php echo $value->name; ?> </option>  
-                          <? } ?>
-                          
-                        </select>
-                         <?php echo form_error('parent','<span class="error">','</span>'); ?>    
-                    </div>
-                    </br>
-
+                  
+                    <div style="float: left;width: 100%;margin-top: 2%;">
                     <div class="col-xs-11">
                     <input type="text" class="form-control" id="inputEmail3" placeholder="Name" name="name" value="<?php if(!empty($name)) echo $name; ?>">
                          <?php echo form_error('name','<span class="error">','</span>'); ?>    
                     </div>
                     </br>
                     <div class="col-xs-11">
-                    <!-- <textarea class="form-control" rows="3" placeholder="Description" name="description"><?php if($description) echo $description; ?></textarea>
+                    <textarea class="form-control" rows="3" placeholder="Description" name="description"><?php if($description) echo $description; ?></textarea>
                          <?php echo form_error('description','<span class="error">','</span>'); ?>  
-                    </div></br> -->
+                    </div></br>
                     <div class="col-xs-11">
                      <label>
-                        <input type="checkbox" class="flat-red" name="enabled" value="1" <?php if($enabled==1 ) echo 'checked'; ?>>&nbsp;&nbsp; Active </label>
+                        <input type="checkbox" class="flat-red" name="activate" value="1" <?php if($activate==1 ) echo 'checked'; ?>>&nbsp;&nbsp; Active </label>
                     </div>
-                    
-                    
+                    </div>
                     
                   </div><!-- /.box-body -->
                   <div class="box-footer">
-                   <?php if(!empty($id)) { ?>
+                  <?php if(!empty($id)) { ?>
                     <button type="submit" class="btn btn-info"><i class="fa fa-fw fa-plus"></i>&nbsp;Update</button>
                   <?php } else { ?>
                     <button type="submit" class="btn btn-info"><i class="fa fa-fw fa-plus"></i>&nbsp;Save</button>
                   <?php } ?>
-                   <button type="reset" class="btn btn-info btn-danger"><i class="fa fa-fw fa-repeat"></i>&nbsp;Reset</button> 
+                  <button type="reset" class="btn btn-info btn-danger"><i class="fa fa-fw fa-repeat"></i>&nbsp;Reset</button> 
                   </div><!-- /.box-footer -->
                 </form>
               </div>
@@ -73,7 +61,6 @@
         .col-xs-11 { float:none;}
       </style>
     <script type="text/javascript">
-    
     
     $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
       checkboxClass: 'icheckbox_flat-green',
@@ -107,7 +94,6 @@ jQuery(function() {
                 minlength:3,
                 maxlength:300
             }
-            
         },
         
         messages: {
@@ -119,8 +105,8 @@ jQuery(function() {
             },
 
             description: {
-                minlength:"The Description at least 3 characters",
-                maxlength:"The Description field can not exceed 300 characters in length."
+                minlength:"The Mobile Number at least 3 characters",
+                maxlength:"The Mobile Number field can not exceed 300 characters in length."
             }
             
         },

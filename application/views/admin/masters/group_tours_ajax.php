@@ -6,7 +6,6 @@
                     <tr>
                       <th style="width: 38px">#</th>
                       <th>Name</th>
-                      <th>Menu</th>
                       <th>Active</th>
                       <th class="center" style="width: 150px">Action</th>
                     </tr>
@@ -15,26 +14,24 @@
                     <?php 
                     if(isset($uri7)) $i=$uri7+1;
                     else $i=1; 
-                    if(!empty($category)) { foreach($category as $categy) { 
-                    ?>
+                    if(!empty($application)) { foreach($application as $appltn) { ?>
                     
-                    <tr id="serial-<?php echo $categy->id; ?>">
+                    <tr id="serial-<?php echo $appltn->id; ?>">
                       <td><a href="javascript:;"><span class="handle ui-sortable-handle">
                                 <i class="fa fa-ellipsis-v"></i>
                                 <i class="fa fa-ellipsis-v"></i>
                             </span></a></td>
-                      <td><?php echo $categy->name; ?></td>
-                      <td><?php if(!empty($categy->gname)) echo $categy->gname; ?></td>
-                      <td> <div class="actv<?php echo $categy->id; ?>"> <?php if($categy->enabled == 1) echo "Yes"; else echo "No"; ?> </div></td>
+                      <td><?php echo $appltn->name; ?></td>
+                      <td> <div class="actv<?php echo $appltn->id; ?>"> <?php if($appltn->activate == 1) echo "Yes"; else echo "No"; ?> </div></td>
                       <td class="center">
                       
-                          <a class="various" data-fancybox-type="iframe" href="<?php echo base_url('admin/subgroup/form/'.$categy->id); ?>">
+                          <a class="various"  href="<?php echo base_url('admin/group_tours/form/'.$appltn->id); ?>">
                           <button class="btn btn-info btn-sm" data-widget="Edit" data-toggle="tooltip" title="" data-original-title="Edit">
                           <i class="fa fa-fw fa-pencil"></i></button> </a>
                           
-                          <button class="btn btn-default btn-sm deactive_active" data-widget="Active" data-toggle="tooltip" title="" data-original-title="Active" id="overlay1<?php echo $categy->id; ?>" value="<?php echo $categy->id; ?>" <?php if(!empty($categy->enabled)) echo 'style="display:none;"'; ?>><i class="icon fa fa-check"></i></button>
+                          <button class="btn btn-default btn-sm deactive_active" data-widget="Active" data-toggle="tooltip" title="" data-original-title="Active" id="overlay1<?php echo $appltn->id; ?>" value="<?php echo $appltn->id; ?>" <?php if(!empty($appltn->activate)) echo 'style="display:none;"'; ?>><i class="icon fa fa-check"></i></button>
                           
-                          <button class="btn btn-default btn-sm deactive_active" data-widget="Deactive" data-toggle="tooltip" title="" data-original-title="Deactive" id="overlay2<?php echo $categy->id; ?>" value="<?php echo $categy->id; ?>" <?php if(empty($categy->enabled)) echo 'style="display:none;"'; ?>><i class="fa fa-fw fa-times"></i></button>
+                          <button class="btn btn-default btn-sm deactive_active" data-widget="Deactive" data-toggle="tooltip" title="" data-original-title="Deactive" id="overlay2<?php echo $appltn->id; ?>" value="<?php echo $appltn->id; ?>" <?php if(empty($appltn->activate)) echo 'style="display:none;"'; ?>><i class="fa fa-fw fa-times"></i></button>
                           
                           
                       </td>
@@ -81,7 +78,7 @@
             $(".overlay").show();
             var id = $( this ).val();
             
-            $.post("<?php echo base_url(); ?>admin/subgroup/activate_dactivate", {
+            $.post("<?php echo base_url(); ?>admin/group_tours/activate_dactivate", {
                 id: id
             }, function (data) {
                 if(data == 1) {
@@ -129,7 +126,7 @@
     function save_sortable()
     {
 	    $.ajax({
-		    url:"<?php echo base_url();?>admin/subgroup/get_serial",
+		    url:"<?php echo base_url();?>admin/group_tours/get_serial",
 		    type:'POST',
 		    data:$('#model_contents').sortable('serialize'),
 		    success:function(data){

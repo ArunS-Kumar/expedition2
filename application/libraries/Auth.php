@@ -49,7 +49,7 @@ class Auth
                 }
                 elseif($default_redirect)
                 {
-                    redirect(config_item('admin_folder').'/dashboard/');
+                    redirect(config_item('admin_folder').'/tour/');
                 }
                 else
                 {

@@ -9,7 +9,7 @@
     <div class="container" >
         <!-- Content Header (Page header) -->
         <section class="content-header">
-                <h1>Tour</h1>
+                <h1>Pages</h1>
                 <?php  include(APPPATH.'views/admin/common/menu.php'); ?>
         </section>
         <!-- Main content -->
@@ -26,19 +26,26 @@
                         <ul class="nav nav-tabs">
                             <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="false"> Info</a></li>
                             <li class=""><a href="#tab_2" data-toggle="tab" aria-expanded="false"> Images</a></li>
-                            <li class=""><a href="#tab_3" data-toggle="tab" aria-expanded="true"> Days</a></li>
-                            <li class=""><a href="#tab_4" data-toggle="tab" aria-expanded="true"> Tags</a></li>
+                            <!-- <li class=""><a href="#tab_3" data-toggle="tab" aria-expanded="true"> Days</a></li> -->
+                            <!-- <li class=""><a href="#tab_4" data-toggle="tab" aria-expanded="true"> Tags</a></li> -->
                         </ul>
-                        <form class="form-horizontal" action="<?php echo base_url('admin/tour/form/'.$id);?>" method="post" accept-charset="utf-8" enctype="multipart/form-data" id="cont_enquiry">
+                        <form class="form-horizontal" action="<?php echo base_url('admin/pages/form/'.$id);?>" method="post" accept-charset="utf-8" enctype="multipart/form-data" id="cont_enquiry">
                             <div class="tab-content">
                                 
                                 <div class="tab-pane active" id="tab_1">
                                     <div class="box-body">
 
                                         <div class="col-xs-11">
-                                            <label for="exampleInputEmail1">Name</label>
-                                            <input type="text" class="form-control" id="inputEmail3" placeholder="Tour Name" name="name" value="<?php if(!empty($name)) echo $name; ?>">
+                                            <label for="exampleInputEmail1">Page Title</label>
+                                            <input type="text" class="form-control" id="inputEmail3" placeholder="Page Title" name="name" value="<?php if(!empty($name)) echo $name; ?>">
                                             <?php echo form_error('name','<span class="error">','</span>'); ?>
+                                        </div>
+                                        <br>
+
+                                        <div class="col-xs-11">
+                                            <label for="exampleInputEmail1">Page Title 2</label>
+                                            <input type="text" class="form-control" id="inputEmail3" placeholder="Page Title 2" name="name2" value="<?php if(!empty($name2)) echo $name2; ?>">
+                                            <?php echo form_error('name2','<span class="error">','</span>'); ?>
                                         </div>
                                         <br>
 
@@ -47,19 +54,7 @@
                                             <textarea id="editor1" class="form-control" rows="3" placeholder="Description" name="description"><?php if($description) echo $description; ?></textarea>
                                             <?php echo form_error('description','<span class="error">','</span>'); ?>
                                         </div>
-                                        <br>
-
-                                        <div class="col-xs-11">
-                                            <label for="exampleInputEmail1">Destination</label>
-                                            <select class="form-control" name="destination">
-                                                <option value="0"> --Select Destination-- </option> 
-                                                <?php foreach ($all_destination as $key => $value) { ?>
-                                                    <option value="<?php echo $value->id; ?>" <?php if(!empty($destination) && $destination == $value->id ) { echo "selected"; } ?> ><?php echo $value->name; ?></option> 
-                                                <?php } ?>
-                                            </select>
-                                            <?php //echo form_error('description','<span class="error">','</span>'); ?>
-                                        </div>
-                                        <br>
+                                        <br><br>                                                                               
 
                                         <div class="col-xs-11">
                                             <label>
@@ -74,7 +69,7 @@
                                 <div class="tab-pane" id="tab_2">
                                     <div class="box-body">
 
-                                        <div class="col-xs-11">
+                                       <!--  <div class="col-xs-11">
                                             <label for="name"> <?php echo "Tour Images";?>  </label>
                                             <div>
                                                 <a href="#" onclick="chage_image($(this));" title="" id="uploadFile">
@@ -87,13 +82,13 @@
                                                 <p class="help-block">&nbsp;&nbsp;&nbsp;Image Size 156 * 128 px</p>
                                                 <input type="file" name="image" id="asd" style="display:none;">
                                             </div>
-                                        </div>
+                                        </div> -->
 
                                         <!-- <div class="col-xs-11"> -->
                                             <!-- <div class="tab-pane" id="tab_2"> -->
                                                 <div class="col-xs-11">
                                                     <label for="name">
-                                                        <?php echo "Tour Banner Images";?>
+                                                        <?php echo "Group Tour Banner Images";?>
                                                     </label>
                                                     <div class="">
                                                         <iframe id="iframe_uploader" src="<?php echo site_url($this->config->item('admin_folder').'/tour/tour_image_form');?>" class="span8" style="height:75px; border:0px;width:99%;"></iframe>
@@ -102,7 +97,7 @@
                                                         <div class="span8">
                                                             <div id="gc_photos">
                                                                 <?php
-                                                                    foreach($tour_image as $photo_id=>$photo_obj)
+                                                                    foreach($image as $photo_id=>$photo_obj)
                                                                     {
                                                                         if(!empty($photo_obj))
                                                                         {
@@ -119,51 +114,10 @@
                                         <!-- </div> -->
                                     </div>
                                 </div>
-                                <!-- /.tab-pane -->
-                                <div class="tab-pane" id="tab_3">
-                                    <br>
-                                    <div class="col-xs-11">
-                                        <label for="name"> <?php echo "Tour Days : ";?>  </label>
-                                        <select name="days" class="form-control" style="width: 14%;" id="day_select">
-                                            <option value="0">--SELECT DAYS--</option>
-                                            <?php for ($i=1; $i <= 30; $i++) {  ?>
-                                                <option <?php if(!empty($days) && $days == $i) { echo "selected"; } ?> ><?php echo $i; ?></option>    
-                                            <?php } ?>
-                                        </select>
-                                    </div>
-                                    <br>
-                                    <?php $i = 1;
-                                    foreach ($day_values as $key => $value) { ?>
-                                        <div class="col-xs-11 daysvalues">
-                                        <label>Day <?php echo $i;?> </label>
-                                        <input type="text" class="form-control valid" id="" placeholder="Tour Day Title" name="day_values[<?php echo $i;?>][name]" value="<?php echo $value->name ?>" aria-required="true" aria-invalid="false"><br>
-                                        
-                                        <input type="text" class="form-control valid" id="" placeholder="Video Link" name="day_values[<?php echo $i;?>][url]" value="<?php echo $value->url ?>" aria-required="true" aria-invalid="false"><br>
-
-                                        <input type="text" class="form-control valid" id="" placeholder="Hotel Name" name="day_values[<?php echo $i;?>][hotel_name]" value="<?php if(isset($value->hotel_name)) echo $value->hotel_name ?>" aria-required="true" aria-invalid="false"><br>
-
-                                        <input type="text" class="form-control valid" id="" placeholder="Hotel Link" name="day_values[<?php echo $i;?>][hotel_link]" value="<?php if(isset($value->hotel_link)) echo $value->hotel_link ?>" aria-required="true" aria-invalid="false"><br>
-                                        
-                                        <textarea class="form-control valid" rows="2" placeholder="Description" name="day_values[<?php echo $i;?>][description]" aria-invalid="false"><?php echo $value->description ?></textarea><br>
-                                    </div>
-                                    <?php $i++; } ?>
+                                
+                               <!--  <div class="tab-pane active" id="tab_4">
                                     
-                                    <div id="append_divs"> </div>
-                                </div>
-                                <div class="tab-pane active" id="tab_4">
-                                    <div class="box-body">
-                                        <div class="col-xs-11">
-                                            <label>Select Tags</label>
-                                            <select name="tags[]" class="form-control select2" multiple="multiple" data-placeholder="Select Tags"
-                                            style="width: 100%;">
-                                            <?php foreach ($all_tags as $key => $value) { ?>
-                                                <option value="<?php echo $value->id; ?>" <?php if(in_array($value->id,$tags)) { echo "selected";} ?> ><?php echo $value->name; ?></option>
-                                                <?php } ?>
-                                            </select>
-                                        </div>
-                                        <br><br>
-                                    </div>
-                                </div>
+                                </div> -->
                                 <!-- /.tab-pane -->
                             </div>
                             <!-- /.tab-content -->
@@ -173,7 +127,7 @@
                                 <?php } else { ?>
                                 <button type="submit" class="btn btn-info"><i class="fa fa-fw fa-plus"></i>&nbsp;Save</button>
                                 <?php } ?>
-                                <a href="<?php echo base_url('admin/tour');?>">
+                                <a href="<?php echo base_url('admin/pages');?>">
                                     <button type="button" class="btn btn-info btn-danger"><i class="fa fa-fw fa-repeat"></i>&nbsp;Back</button>
                                 </a>
                             </div>
@@ -193,7 +147,7 @@
 <?php function add_image($photo_id, $filename, $alt=false ) { ob_start(); ?>
 <div class="row gc_photo" id="gc_photo_<?php echo $photo_id;?>">
     <div class="span2">
-        <input type="hidden" id="profileImageFile<?php echo $photo_id;?>" name="tour_image[<?php echo $photo_id;?>][filename]" value="<?php echo $filename;?>" />
+        <input type="hidden" id="profileImageFile<?php echo $photo_id;?>" name="image[<?php echo $photo_id;?>][filename]" value="<?php echo $filename;?>" />
         <img class="gc_thumbnail" src="<?php echo base_url('uploads/images/thumbnails/'.$filename);?>" id="profileImage<?php echo $photo_id; ?>" style="float: left;margin-right: 2%;margin-left: 3%;width: 290px;height: 182px;" />
         <img src="<?php echo base_url()?>assets/img/loding-icon.gif" id="hide_show_gif1<?php echo $photo_id; ?>" style=" display:none; margin-left: 5%; width: 150px; height: 110px; " />
         <div id="messageBox<?php echo $photo_id; ?>"></div>
@@ -206,7 +160,7 @@
             <!-- </div> -->
             <div class="row">
                 <div class="span2">
-                    <input name="tour_image[<?php echo $photo_id;?>][alt]" value="<?php echo $alt;?>" class="span2" placeholder="<?php echo lang('alt_tag');?>" style="width: 50%;" />
+                    <input name="image[<?php echo $photo_id;?>][alt]" value="<?php echo $alt;?>" class="span2" placeholder="<?php echo lang('alt_tag');?>" style="width: 50%;" />
                 </div>
                 </br>
                 </br>
@@ -241,28 +195,6 @@ $("#asd").change(function () {
     readImage(this);
 });
 
-$("#day_select").change(function () {
-    
-    let id = '<?php echo $id; ?>';
-    let select_val = $(this).val();
-    let output_html = '';
-    let divCount = 0;
-    if(id) {
-        divCount = $('.daysvalues').length;
-        select_val = (select_val - divCount );
-    }
-    
-    if(select_val > 0) {
-        for (var i = 1; i <= select_val; i++) {
-            output_html += '<div class="col-xs-11 daysvalues"> <label>Day '+(divCount + i)+'</label><input type="text" class="form-control valid" id="" placeholder="Tour Day Title" name="day_values['+i+'][name]" value="" aria-required="true" aria-invalid="false"><br> <input type="text" class="form-control valid" id="" placeholder="Video Url" name="day_values['+i+'][url]" value="" aria-required="true" aria-invalid="false"><br><input type="text" class="form-control valid" id="" placeholder="Hotel Name" name="day_values['+i+'][hotel_name]" value="" aria-required="true" aria-invalid="false"><br><input type="text" class="form-control valid" id="" placeholder="Hotel Link" name="day_values['+i+'][hotel_link]" value="" aria-required="true" aria-invalid="false"><br> <textarea class="form-control valid" rows="2" placeholder="Description" name="day_values['+i+'][description]" aria-invalid="false"></textarea><br></div>';
-        }
-        $('#append_divs').html('');
-        $('#append_divs').append(output_html);
-    } else {
-
-    }
-    
-});
 
 function readImage(input) {
     if (input.files && input.files[0]) {

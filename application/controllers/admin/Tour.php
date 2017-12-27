@@ -82,7 +82,7 @@ class Tour extends Admin_Controller {
 	
 	function form($id = false)
    	{
-   		// echo "<pre>"; print_r($_POST); exit;
+   		
         $config['upload_path']      = 'uploads/images/full';
         $config['allowed_types']    = 'gif|jpg|png';
         $config['max_width']        = '5000';
@@ -102,6 +102,7 @@ class Tour extends Admin_Controller {
         $data['tour_image']         = array();
         $data['day_values']         = array();
         $data['all_destination']    = $this->Common_model->get_destination();
+        $data['all_tags']           = $this->Common_model->get_tags();
         
         if ($id)
         {   
@@ -124,6 +125,7 @@ class Tour extends Admin_Controller {
 	        {
                 $data['tour_image']	     = (array)json_decode($tour->tour_image);
                 $data['day_values']	     = (array)json_decode($tour->day_values);
+                $data['tags']	         = (array)json_decode($tour->tags);
 	        }
         }
 
@@ -151,6 +153,7 @@ class Tour extends Admin_Controller {
             $save['created_at']         = $this->session->userdata('admin')['id'];
 	        $save['tour_image']	        = json_encode($this->input->post('tour_image'));
 	        $save['day_values']	        = json_encode($this->input->post('day_values'));
+	        $save['tags']	            = json_encode($this->input->post('tags'));
             
             if($id)
             $save['updated_at']         = date('Y-m-d H:i:s');
